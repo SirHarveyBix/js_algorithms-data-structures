@@ -1,4 +1,6 @@
-console.log('\x1b[38;5;200m Big O Notation \x1b[0m \n');
+import { Logger } from '../utils';
+
+Logger.printTitle('Big O Notation');
 
 function slowerAddUpTo(number: number) {
   let total = 0;
@@ -12,10 +14,8 @@ const t1 = performance.now();
 slowerAddUpTo(1000000000);
 const t2 = performance.now();
 
-console.log(
-  `\x1b[38;5;214mSlower\x1b[0m: Time Elapsed: ${(t2 - t1) / 1000} seconds.\n`
-);
-console.log((t2 - t1) / 1000 && '------\n');
+Logger.printValues((t2 - t1) / 1000, 'Slower', 'Time Elapsed');
+Logger.printSpacer((t2 - t1) / 1000);
 
 /** ------------  */
 
@@ -27,8 +27,4 @@ const time1 = performance.now();
 fasterAddUpTo(1000000000);
 const time2 = performance.now();
 
-console.log(
-  `\x1b[38;5;214mFaster\x1b[0m: Time Elapsed: ${
-    (time2 - time1) / 1000
-  } seconds.\n`
-);
+Logger.printValues((time2 - time1) / 1000, 'Faster', 'Time Elapsed');
