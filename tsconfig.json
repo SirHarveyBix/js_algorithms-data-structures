@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "types": [
+      // other types...
+      "jest"
+    ],
+    "lib": [
+      // other libs...
+      "ES6",
+      "DOM"
+    ],
+    // other settings...
+  }
+}
