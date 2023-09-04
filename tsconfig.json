@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    "types": [
-      // other types...
-      "jest"
-    ],
     "lib": [
       // other libs...
       "ESNext",
