@@ -1,8 +1,13 @@
+/**
+ * ANSI Color Codes :
+ * https://talyian.github.io/ansicolors/
+ */
+
 export class Logger {
   public static printTitle(title: string): void {
     const hashs = this.titleToHash(title);
 
-    console.log(`${hashs}\x1b[38;5;200m${title}\x1b[0m${hashs}`);
+    console.log(`${hashs}\x1b[38;5;200m ${title}\x1b[0m${hashs}`);
   }
 
   public static printSpacer(condition: unknown): void {
@@ -24,11 +29,6 @@ export class Logger {
     for (let i = 0; i < title.length; i++) {
       hash.push('#');
     }
-    return `\n${hash.toString().replace(/,/g, '')}\n`;
+    return `\n${hash.toString().replace(/,/g, '') + '##'}\n`;
   }
 }
-
-/**
- * ANSI Color Codes :
- * https://talyian.github.io/ansicolors/
- */

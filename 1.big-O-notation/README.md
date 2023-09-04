@@ -1,7 +1,7 @@
 # Big O Notation
 
 La notation Big O (_complexité algorithmique_) permet de meusurer la performance d'un algorithme.
-c'est une meusure mathematique qui permet de de juger de l'efficacité du code, cette meusure sera donnée en temps.
+c'est une meusure mathematique qui permet de de juger de l'efficacité du code, **cette meusure sera donnée en temps**.
 
 >Le O de Big O est un petit nom pour « ordre de grandeur »,
 ce qui nous permet d’avoir une mesure fiable de l’efficacité de tout le code produit.
@@ -19,7 +19,7 @@ function addUpTo(n) {
 }
 ```
 
-> il n'y a que 3 operation, et il n'y aura toujours que 3 operation **O(1)**
+> il n'y a que 3 operation, et il n'y aura toujours que 3 operation, on simplifiera par : **O(1)**
 
 est donc plus efficient que celui ci :
 
@@ -33,8 +33,16 @@ function addUpTo(n) {
 }
 ```
 
-> le nombre d'operation depend du paramètre _number_ **O(n)**
+> le nombre d'operation depend du paramètre _n_, on simplifiera par : **O(n)**
 
 par ce qu'il contient plus d'operations, cependant, il est est plus lisible.
 
 pour voir ce "_temps_" en action vous pouvez tester ce [Performance Tracker](https://rithmschool.github.io/function-timer-demo/)
+
+## Complexité en espace
+
+- La plupart des types primitifs (_booleans_, _number_, _undefined_, _null_) sont constant en espace
+- les _string_ requiere de l'espace **O(n)** `n = string.length`
+- les types reference (_Array_, _Object_, _Function_) sont souvent **O(n)** `n = Array.length` ou `n = Object.keys(Object)`
+
+revoir les notions : [Complexité en espace](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/learn/lecture/8344050#questions)

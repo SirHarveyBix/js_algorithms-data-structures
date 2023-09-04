@@ -2,6 +2,8 @@ import { Logger } from '../utils';
 
 Logger.printTitle('Big O Notation');
 
+/** ------------  */
+
 function slowerAddUpTo(number: number) {
   let total = 0;
   for (let i = 1; i <= number; i++) {
